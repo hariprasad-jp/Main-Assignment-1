@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+}
+form{
+    position: relative;
+    margin-top: 10px;
+    text-align:center;
+    width: 400px;
+    height: 525px;
+    
+    color: rgb(255, 255, 255);
+}
+input{
+    position: relative;
+    display: block;
+    width: 350px;
+    height: 40px;
+    margin: 20px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background: transparent;
+    color: rgb(255, 255, 255);
+}
+button{
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgb(60, 0, 255);
+    border: none;
+    color: rgb(255, 255, 255);
+    outline: none;
+    cursor: pointer;
+    border-radius: 40px;
+}
+form h1{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+.indicator{
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    display: none;
+}
+
+.indicator span{
+    width: 100%;
+    height: 100%;
+    background: lightgrey;
+    border-radius: 5px;
+    position: relative;
+}
+.indicator span:nth-child(2){
+    margin: 0 3px;
+}
+
+.indicator span.active:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 5px;
+}
+
+.indicator span.weak:before{
+    background-color: #ff4757;
+}
+
+.indicator span.medium:before{
+    background-color: rgb(255, 136, 0);
+}
+
+.indicator span.strong:before{
+    background-color: #23ad5c;
+}
+
+.indicator.text{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: -10px;
+    display: none;
+}
+
+.indicator.text.weak{
+    color: #ff0015;
+}
+.indicator.text.medium{
+    color: rgb(255, 136, 0);
+}
+.indicator.text.strong{
+    color: #23ad5c;
+}
